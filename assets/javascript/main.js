@@ -16,7 +16,7 @@ for (let key of keys) {
         input = input.slice(0, -1);
         display_input.innerHTML = CleanInput(input);
       } else if (value == "=") {
-        let result = eval(PerpareInput(input));
+        let result = eval(caseOfpercentage(input));
 
         display_output.innerHTML = CleanOutput(result);
       } else if (value == "brackets") {
@@ -117,7 +117,7 @@ function ValidateInput(value) {
 }
 
 //function to check the percentage operation
-function PerpareInput(input) {
+function caseOfpercentage(input) {
   let input_array = input.split("");
 
   for (let i = 0; i < input_array.length; i++) {
