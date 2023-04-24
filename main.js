@@ -84,15 +84,15 @@ function CleanOutput(output) {
 
   let output_array = output_string.split('');
 
-  // if (output_array.length > 3) {
-  //   for (let i = output_array.length - 3; i > 0; i -= 3) {
-  //     if (output_array[i] == ".") {
-  //       continue;
-  //     } else {
-  //       output_array.splice(i, 0, ",");
-  //     }
-  //   }
-  // }
+  if (output_array.length > 3) {
+    for (let i = output_array.length - 3; i > 0; i -= 3) {
+      if (output_array[i] == ".") {
+        continue;
+      } else {
+        output_array.splice(i, 0, ",");
+      }
+    }
+  }
 
   if (decimal) {
     output_array.push(',');
